@@ -4,20 +4,22 @@
 __metadata:
   version: 4
 
-"@org/package-a@workspace:packages/a":
-  version: 0.0.0-use.local
-  resolution: "@org/package-a@workspace:packages/a"
-  languageName: unknown
-  linkType: soft
-
 "monorepo@workspace:.":
   version: 0.0.0-use.local
   resolution: "monorepo@workspace:."
   languageName: unknown
   linkType: soft
 
-"package-b@workspace:packages/b":
+"somepackage-a@workspace:packages/a":
   version: 0.0.0-use.local
-  resolution: "package-b@workspace:packages/b"
+  resolution: "somepackage-a@workspace:packages/a"
+  languageName: unknown
+  linkType: soft
+
+"somepackage-b@workspace:packages/b":
+  version: 0.0.0-use.local
+  resolution: "somepackage-b@workspace:packages/b"
+  dependencies:
+    somepackage-a: "workspace:packages/a"
   languageName: unknown
   linkType: soft

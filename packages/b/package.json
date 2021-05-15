@@ -1,3 +1,6 @@
 {
-  "name": "package-b"
+  "name": "somepackage-b",
+  "dependencies": {
+    "somepackage-a": "workspace:packages/a"
+  }
 }
